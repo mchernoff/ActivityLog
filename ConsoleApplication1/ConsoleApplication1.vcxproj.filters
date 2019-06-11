@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\benchmarks\benchmark_helpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\detail\ckms_quantiles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\detail\counter_builder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\detail\future_std.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\detail\gauge_builder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\detail\histogram_builder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\detail\summary_builder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\detail\time_window_quantiles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\detail\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\check_names.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\client_metric.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\collectable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\counter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\family.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\gauge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\histogram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\metric_family.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\metric_type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\registry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\serializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\summary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\include\prometheus\text_serializer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\core\src\detail\hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\pull\include\prometheus\exposer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\pull\src\handler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="prometheus-cpp-master\push\include\prometheus\gateway.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
