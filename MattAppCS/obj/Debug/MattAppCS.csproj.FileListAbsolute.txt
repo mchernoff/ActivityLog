@@ -1,7 +1,0 @@
-C:\Users\mchernoff\source\repos\ConsoleApplication1\MattAppCS\bin\Debug\MattAppCS.exe.config
-C:\Users\mchernoff\source\repos\ConsoleApplication1\MattAppCS\bin\Debug\MattAppCS.exe
-C:\Users\mchernoff\source\repos\ConsoleApplication1\MattAppCS\bin\Debug\MattAppCS.pdb
-C:\Users\mchernoff\source\repos\ConsoleApplication1\MattAppCS\obj\Debug\MattAppCS.csprojAssemblyReference.cache
-C:\Users\mchernoff\source\repos\ConsoleApplication1\MattAppCS\obj\Debug\MattAppCS.csproj.CoreCompileInputs.cache
-C:\Users\mchernoff\source\repos\ConsoleApplication1\MattAppCS\obj\Debug\MattAppCS.exe
-C:\Users\mchernoff\source\repos\ConsoleApplication1\MattAppCS\obj\Debug\MattAppCS.pdb
