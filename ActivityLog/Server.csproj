@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6E898BD7-7BE9-4F0E-BD94-9D42190B5D0B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MattAppCS</RootNamespace>
-    <AssemblyName>MattAppCS</AssemblyName>
+    <RootNamespace>ActivityLog</RootNamespace>
+    <AssemblyName>ActivityLog</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

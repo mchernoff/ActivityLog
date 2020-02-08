@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Daemon", "ConsoleApplication1\ConsoleApplication1.vcxproj", "{CE0111B3-E5FA-463C-A6E6-86B25DFFEF42}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CWinHook", "CWinHook\ConsoleApplication1.vcxproj", "{CE0111B3-E5FA-463C-A6E6-86B25DFFEF42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "MattAppCS\Server.csproj", "{6E898BD7-7BE9-4F0E-BD94-9D42190B5D0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "ActivityLog\Server.csproj", "{6E898BD7-7BE9-4F0E-BD94-9D42190B5D0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
