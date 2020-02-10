@@ -14,27 +14,45 @@ struct addrinfo *result = NULL,
 	*ptr = NULL,
 	hints;
 
-HHOOK hHook = 0;
+HHOOK kHook = 0;
+HHOOK mHook = 0;
 
 SOCKET ConnectSocket = INVALID_SOCKET;
-const char *sendbuf = "kdown";
+const char *key_code = "kdown";
+const char *mouse_code = "mclick";
 
 LRESULT CALLBACK KeyboardHook(int nCode, WPARAM wParam, LPARAM lParam)
-{	if (nCode == HC_ACTION)
+{
+	if (nCode == HC_ACTION)
+	{
 		if (wParam == WM_SYSKEYDOWN || wParam == WM_KEYDOWN)
 		{
-			int iResult = send(ConnectSocket, sendbuf, (int)strlen(sendbuf), 0);
+			int iResult = send(ConnectSocket, key_code, (int)strlen(key_code), 0);
 		}
-	return CallNextHookEx(hHook, nCode, wParam, lParam);
+	}
+	return CallNextHookEx(kHook, nCode, wParam, lParam);
+}
+
+LRESULT CALLBACK MouseHook(int nCode, WPARAM wParam, LPARAM lParam)
+{
+	if (nCode >= 0)
+	{
+		if (wParam == WM_MBUTTONDOWN || wParam == WM_LBUTTONDOWN || wParam == WM_RBUTTONDOWN)
+		{
+			int iResult = send(ConnectSocket, mouse_code, (int)strlen(mouse_code), 0);
+		}
+	}
+	return CallNextHookEx(mHook, nCode, wParam, lParam);
 }
 
 int APIENTRY WinMain(HINSTANCE hInstance,
 	HINSTANCE hPrevInstance,
 	LPSTR lpCmdLine,
 	int nCmdShow)
-{struct addrinfo *result = NULL,
-                    *ptr = NULL,
-                    hints;
+{
+	struct addrinfo *result = NULL,
+		*ptr = NULL,
+		hints;
 	int iResult;
 	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
 
@@ -43,7 +61,8 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 	hints.ai_socktype = SOCK_STREAM;
 	hints.ai_protocol = IPPROTO_TCP;
 
-	const char* ipaddress = "aerodsk747.aerotechad.com";
+	char ipaddress[128] = "";
+	gethostname(ipaddress, sizeof(ipaddress));
 
 	iResult = getaddrinfo(ipaddress, DEFAULT_PORT, &hints, &result);
 	if (iResult != 0) {
@@ -72,9 +91,11 @@ int APIENTRY WinMain(HINSTANCE hInstance,
 		break;
 	}
 
-	hHook = SetWindowsHookEx(13, KeyboardHook, hInstance, 0);
+	kHook = SetWindowsHookEx(13, KeyboardHook, hInstance, 0);
+	mHook = SetWindowsHookEx(WH_MOUSE_LL, MouseHook, hInstance, 0);
 	while (GetMessage(NULL, NULL, 0, 0)); // NOP while not WM_QUIT
 
 	//Flush output
-	return UnhookWindowsHookEx(hHook);
+	UnhookWindowsHookEx(mHook);
+	return UnhookWindowsHookEx(kHook);
 }
