@@ -1,6 +1,6 @@
 Application for hosting a Grafana dashboard that logs keystrokes and mouse clicks over time.
 
-![Image description](https://github.com/mchernoff/activitylog/activitylog.png)
+![Example dashboard](https://github.com/mchernoff/ActivityLog/blob/master/activitylog.png)
 
 ## Requirements
 
